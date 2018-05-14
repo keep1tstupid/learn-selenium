@@ -45,7 +45,7 @@ namespace learn_selenium
 
         public void OpenPage()
         {
-            _driver.Navigate().GoToUrl("https://www.google.ru");
+            _driver.Navigate().GoToUrl("https://www.google.com");
         }
 
         public void FindText(string text)

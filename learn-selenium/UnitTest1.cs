@@ -25,5 +25,14 @@ namespace learn_selenium
             googleSearch.FindText("pepe");
             Assert.AreEqual(10, googleSearch.SearchResultsCount());
         }
+
+        [TestMethod]
+        public void SimpleGoogleTranslate()
+        {
+            TranslatorPage googleTranslate = new TranslatorPage(chromeDriver);
+            googleTranslate.OpenPage();
+            googleTranslate.TranslateText("123");
+            Assert.AreEqual("123", googleTranslate.TranslatedText());
+        }
     }
 }
